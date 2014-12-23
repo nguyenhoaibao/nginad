@@ -72,6 +72,7 @@ class OpenRTBWorkflow {
     	$AuctionPopo->auction_was_won = true;
     	
     	$WinningRTBPinger 						= $AuctionPopo->SelectedPingerList[0];
+        var_dump($WinningRTBPinger);
     	$seat_bid_list_key 						= \util\WorkflowHelper::get_first_key($WinningRTBPinger->RtbBidResponse->RtbBidResponseSeatBidList);
     	$bid_list_key							= \util\WorkflowHelper::get_first_key($WinningRTBPinger->RtbBidResponse->RtbBidResponseSeatBidList[$seat_bid_list_key]->RtbBidResponseBidList);
     	$WinningRtbResponseBid 					= $WinningRTBPinger->RtbBidResponse->RtbBidResponseSeatBidList[$seat_bid_list_key]->RtbBidResponseBidList[$bid_list_key];
