@@ -18,8 +18,6 @@ class OpenRTBWorkflow {
     	$this->config = $config;
     	
     	$AuctionPopo->auction_was_won = false;
-
-        var_dump("Pick", \sellrtb\workflows\tasklets\common\PickAWinner::execute($logger, $this, $RTBPingerList, $AuctionPopo) === false);
     	
     	// Add Bids to POPO
     	
@@ -77,7 +75,7 @@ class OpenRTBWorkflow {
     	$seat_bid_list_key 						= \util\WorkflowHelper::get_first_key($WinningRTBPinger->RtbBidResponse->RtbBidResponseSeatBidList);
     	$bid_list_key							= \util\WorkflowHelper::get_first_key($WinningRTBPinger->RtbBidResponse->RtbBidResponseSeatBidList[$seat_bid_list_key]->RtbBidResponseBidList);
     	$WinningRtbResponseBid 					= $WinningRTBPinger->RtbBidResponse->RtbBidResponseSeatBidList[$seat_bid_list_key]->RtbBidResponseBidList[$bid_list_key];
-    	 
+    	var_dump($WinningRtbResponseBid);
     	$bid_price 								= floatval($WinningRtbResponseBid->price);
     	
     	$WinningRTBPinger->won_auction 			= true;
@@ -117,7 +115,6 @@ class OpenRTBWorkflow {
 	    		
     		endif;
     	elseif (!empty($WinningRtbResponseBid->adm)):
-            var_dump("here");
     	
     		$AuctionPopo->winning_ad_tag		= rawurldecode($WinningRtbResponseBid->adm);
     	
