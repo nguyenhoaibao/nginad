@@ -264,7 +264,7 @@ class PingManager {
 		$logger = \rtbsellv22\RtbSellV22Logger::get_instance();
 		$OpenRTBWorkflow = new \sellrtb\workflows\OpenRTBWorkflow();
 
-		var_dump($AuctionPopo);
+
 		 
 		$this->winning_partner_pinger = $OpenRTBWorkflow->process_business_rules_workflow($logger, $this->config, $this->RTBPingerList, $AuctionPopo);
 
