@@ -170,6 +170,7 @@ class IndexController extends AbstractActionController
 	 		$RtbSellV22Bid->create_rtb_request_from_publisher_display_impression($config, $banner_request);
 	 		
 	 		$bid_request = $RtbSellV22Bid->build_rtb_bid_request();
+            var_dump($bid_request);
 	 		
 	 		$PingManager = new \pinger\PingManager($config, $bid_request, $PublisherAdZone->AdOwnerID, $PublisherAdZone->PublisherWebsiteID, $PublisherAdZone->FloorPrice, $banner_request["PublisherAdZoneID"], $banner_request["AdName"], $banner_request["WebDomain"], $banner_request["ImpressionType"]);
 	 	
