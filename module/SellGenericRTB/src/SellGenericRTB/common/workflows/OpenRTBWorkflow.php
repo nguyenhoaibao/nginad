@@ -18,6 +18,9 @@ class OpenRTBWorkflow {
     	$this->config = $config;
     	
     	$AuctionPopo->auction_was_won = false;
+
+        var_dump("Add Bid", \sellrtb\workflows\tasklets\common\AddBids::execute($logger, $this, $RTBPingerList, $AuctionPopo));
+        var_dump("Pick", \sellrtb\workflows\tasklets\common\PickAWinner::execute($logger, $this, $RTBPingerList, $AuctionPopo));
     	
     	// Add Bids to POPO
     	
