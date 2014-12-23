@@ -17,7 +17,7 @@ class OpenRTBWorkflow {
 	
     	$this->config = $config;
     	
-    	$AuctionPopo->auction_was_won = true;
+    	$AuctionPopo->auction_was_won = false;
     	
     	// Add Bids to POPO
     	
