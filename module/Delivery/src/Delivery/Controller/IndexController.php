@@ -184,9 +184,6 @@ class IndexController extends AbstractActionController
 	 		endif;
 
 	 		$PingManager->ping_rtb_ping_clients();
-
-            var_dump("Auction", $AuctionPopo);
-            var_dump($AuctionPopo->auction_was_won === false);
 	 		
 	 		$AuctionPopo   		= $PingManager->process_rtb_ping_responses();
 
