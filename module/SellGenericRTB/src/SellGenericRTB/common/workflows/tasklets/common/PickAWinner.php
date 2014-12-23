@@ -47,7 +47,7 @@ class PickAWinner {
 			endforeach;
 			
 		endforeach;
-		var_dump("total bid: ", $total_bids);
+	
 		$random_winner_idx = rand(0, $total_bids - 1);
 	
 		$bid_count = 0;
