@@ -186,6 +186,7 @@ class IndexController extends AbstractActionController
 	 		$PingManager->ping_rtb_ping_clients();
 	 		
 	 		$AuctionPopo   		= $PingManager->process_rtb_ping_responses();
+            var_dump($AuctionPopo);
 
 	 		$auction_was_won 	= $AuctionPopo->auction_was_won;
 	 		
