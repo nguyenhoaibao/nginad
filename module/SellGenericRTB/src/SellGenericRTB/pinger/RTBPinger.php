@@ -71,6 +71,8 @@ class RTBPinger {
 	public function get_rtb_ping_curl_request() {
 		
 		$post_data = $this->ping_data;
+		var_dump("ping url:", $this->ping_url);
+		var_dump("post data:", $post_data);
 
 		//open connection
 		$ch = curl_init();
