@@ -117,6 +117,7 @@ class OpenRTBWorkflow {
 	    		
     		endif;
     	elseif (!empty($WinningRtbResponseBid->adm)):
+            var_dump("here");
     	
     		$AuctionPopo->winning_ad_tag		= rawurldecode($WinningRtbResponseBid->adm);
     	
